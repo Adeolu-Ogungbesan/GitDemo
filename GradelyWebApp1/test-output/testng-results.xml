@@ -1,39 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-31T16:00:01 WAT" name="Default suite" finished-at="2022-07-31T16:02:50 WAT" duration-ms="169227">
+  <suite started-at="2022-08-09T11:25:55 WAT" name="Default suite" finished-at="2022-08-09T11:30:03 WAT" duration-ms="248761">
     <groups>
     </groups>
-    <test started-at="2022-07-31T16:00:01 WAT" name="Default test" finished-at="2022-07-31T16:02:50 WAT" duration-ms="169227">
-      <class name="Tests.SigninPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.SigninPageTest@6572421]" started-at="2022-07-31T16:00:01 WAT" name="setUp" finished-at="2022-07-31T16:00:05 WAT" duration-ms="4353" status="PASS">
+    <test started-at="2022-08-09T11:25:55 WAT" name="Default test" finished-at="2022-08-09T11:30:03 WAT" duration-ms="248761">
+      <class name="Tests.StudentOnboardingWithSchoolTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.StudentOnboardingWithSchoolTest@4efbca5a]" started-at="2022-08-09T11:25:16 WAT" name="setUp" finished-at="2022-08-09T11:25:55 WAT" duration-ms="38683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="signin()[pri:0, instance:Tests.SigninPageTest@6572421]" started-at="2022-07-31T16:00:05 WAT" name="signin" finished-at="2022-07-31T16:02:50 WAT" duration-ms="164784" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="signin()[pri:0, instance:Tests.StudentOnboardingWithSchoolTest@4efbca5a]" started-at="2022-08-09T11:25:55 WAT" name="signin" finished-at="2022-08-09T11:29:01 WAT" duration-ms="186223" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#userinfo"}
-  (Session info: chrome=103.0.5060.134)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+              <![CDATA[java.util.concurrent.TimeoutException
 Build info: version: '4.1.0', revision: '87802e897b'
-System info: host: 'DESKTOP-PQAQEE1', ip: '172.20.144.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1c84b21389ca09819158c99e84400ad8, findElement {using=css selector, value=#userinfo}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\hp\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:52120}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52120/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1c84b21389ca09819158c99e84400ad8]]>
+System info: host: 'DESKTOP-PQAQEE1', ip: '172.22.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [53bd2db7b585775f3a10fc0d46af3df3, findElement {using=css selector, value=#app > div:nth-child(1) > div.verification-dialog.gradely-container.px-0.px-sm-3.px-md-4.px-xl-4.mx-auto > div.row.mx-auto.w-100 > div > div > div.content-area > div.resend-link.color-ash.text-center.smooth-transition > div.mgt-7.smooth-transition > span:nth-child(3)}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 104.0.1293.47, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:64615}, msedge: {msedgedriverVersion: 104.0.1293.47 (246533a39fec..., userDataDir: C:\Users\hp\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64615/devtoo..., se:cdpVersion: 104.0.1293.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 53bd2db7b585775f3a10fc0d46af3df3]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#userinfo"}
-  (Session info: chrome=103.0.5060.134)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+              <![CDATA[org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
 Build info: version: '4.1.0', revision: '87802e897b'
-System info: host: 'DESKTOP-PQAQEE1', ip: '172.20.144.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1c84b21389ca09819158c99e84400ad8, findElement {using=css selector, value=#userinfo}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\hp\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:52120}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52120/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1c84b21389ca09819158c99e84400ad8
+System info: host: 'DESKTOP-PQAQEE1', ip: '172.22.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [53bd2db7b585775f3a10fc0d46af3df3, findElement {using=css selector, value=#app > div:nth-child(1) > div.verification-dialog.gradely-container.px-0.px-sm-3.px-md-4.px-xl-4.mx-auto > div.row.mx-auto.w-100 > div > div > div.content-area > div.resend-link.color-ash.text-center.smooth-transition > div.mgt-7.smooth-transition > span:nth-child(3)}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 104.0.1293.47, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:64615}, msedge: {msedgedriverVersion: 104.0.1293.47 (246533a39fec..., userDataDir: C:\Users\hp\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64615/devtoo..., se:cdpVersion: 104.0.1293.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 53bd2db7b585775f3a10fc0d46af3df3
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)
+at org.openqa.selenium.remote.http.RetryRequest.lambda$apply$6(RetryRequest.java:82)
+at net.jodah.failsafe.Functions.lambda$get$0(Functions.java:48)
+at net.jodah.failsafe.RetryPolicyExecutor.lambda$supply$0(RetryPolicyExecutor.java:66)
+at net.jodah.failsafe.RetryPolicyExecutor.lambda$supply$0(RetryPolicyExecutor.java:66)
+at net.jodah.failsafe.RetryPolicyExecutor.lambda$supply$0(RetryPolicyExecutor.java:66)
+at net.jodah.failsafe.Execution.executeSync(Execution.java:128)
+at net.jodah.failsafe.FailsafeExecutor.call(FailsafeExecutor.java:379)
+at net.jodah.failsafe.FailsafeExecutor.get(FailsafeExecutor.java:68)
+at org.openqa.selenium.remote.http.RetryRequest.lambda$apply$7(RetryRequest.java:82)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:51)
+at org.openqa.selenium.remote.http.RetryRequest.lambda$apply$6(RetryRequest.java:82)
+at net.jodah.failsafe.Functions.lambda$get$0(Functions.java:48)
+at net.jodah.failsafe.RetryPolicyExecutor.lambda$supply$0(RetryPolicyExecutor.java:66)
+at net.jodah.failsafe.RetryPolicyExecutor.lambda$supply$0(RetryPolicyExecutor.java:66)
+at net.jodah.failsafe.RetryPolicyExecutor.lambda$supply$0(RetryPolicyExecutor.java:66)
+at net.jodah.failsafe.Execution.executeSync(Execution.java:128)
+at net.jodah.failsafe.FailsafeExecutor.call(FailsafeExecutor.java:379)
+at net.jodah.failsafe.FailsafeExecutor.get(FailsafeExecutor.java:68)
+at org.openqa.selenium.remote.http.RetryRequest.lambda$apply$7(RetryRequest.java:82)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:108)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:197)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:193)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:631)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:628)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+at Tests.StudentOnboardingWithSchoolTest.signin(StudentOnboardingWithSchoolTest.java:57)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:66)
+... 64 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signin -->
+        <test-method signature="studentOnboardingWithInviteSchool()[pri:0, instance:Tests.StudentOnboardingWithSchoolTest@4efbca5a]" started-at="2022-08-09T11:29:01 WAT" name="studentOnboardingWithInviteSchool" finished-at="2022-08-09T11:30:03 WAT" duration-ms="62384" status="FAIL">
+          <exception class="org.openqa.selenium.InvalidSelectorException">
+            <message>
+              <![CDATA[invalid selector: An invalid or illegal selector was specified
+  (Session info: MicrosoftEdge=104.0.1293.47)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.1.0', revision: '87802e897b'
+System info: host: 'DESKTOP-PQAQEE1', ip: '172.22.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [53bd2db7b585775f3a10fc0d46af3df3, findElement {using=css selector, value=#app > div:nth-child(1) > div > div.row.mx-auto.w-100 > div > div > div.content-area > div.btn-section.mgt-30 > a.btn.mgb-24{}}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 104.0.1293.47, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:64615}, msedge: {msedgedriverVersion: 104.0.1293.47 (246533a39fec..., userDataDir: C:\Users\hp\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64615/devtoo..., se:cdpVersion: 104.0.1293.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 53bd2db7b585775f3a10fc0d46af3df3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+  (Session info: MicrosoftEdge=104.0.1293.47)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.1.0', revision: '87802e897b'
+System info: host: 'DESKTOP-PQAQEE1', ip: '172.22.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [53bd2db7b585775f3a10fc0d46af3df3, findElement {using=css selector, value=#app > div:nth-child(1) > div > div.row.mx-auto.w-100 > div > div > div.content-area > div.btn-section.mgt-30 > a.btn.mgb-24{}}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 104.0.1293.47, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:64615}, msedge: {msedgedriverVersion: 104.0.1293.47 (246533a39fec..., userDataDir: C:\Users\hp\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64615/devtoo..., se:cdpVersion: 104.0.1293.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 53bd2db7b585775f3a10fc0d46af3df3
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -48,8 +144,8 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-at Pages.StudentSigninPageObj.EnterUserName(StudentSigninPageObj.java:23)
-at Tests.SigninPageTest.signin(SigninPageTest.java:34)
+at Pages.StudentOnboardingPage.clickUseWithSchool(StudentOnboardingPage.java:39)
+at Tests.StudentOnboardingWithSchoolTest.studentOnboardingWithInviteSchool(StudentOnboardingWithSchoolTest.java:72)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -78,11 +174,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signin -->
-      </class> <!-- Tests.SigninPageTest -->
+        </test-method> <!-- studentOnboardingWithInviteSchool -->
+      </class> <!-- Tests.StudentOnboardingWithSchoolTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
