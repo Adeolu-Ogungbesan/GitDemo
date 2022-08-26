@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="adeoluogungbesan.misceleniumDemo">
+      <class name="adeoluogungbesan.eCommerce_tc_01">
         <methods>
-          <include name="Miscelenium"/>
+          <include name="fillForm"/>
           <include name="CofigureDriver"/>
           <include name="TearDown"/>
         </methods>
-      </class> <!-- adeoluogungbesan.misceleniumDemo -->
+      </class> <!-- adeoluogungbesan.eCommerce_tc_01 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
