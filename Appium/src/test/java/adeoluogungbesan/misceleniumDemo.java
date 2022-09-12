@@ -7,6 +7,7 @@ import java.net.URL;
 import org.openqa.selenium.By;
 import org.openqa.selenium.DeviceRotation;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -27,15 +28,16 @@ public class misceleniumDemo extends BaseTest {
 	
 	
 	@Test
-	public void Miscelenium() {
-		//adb shell dumpsys window | find 'mCurrentFocus'
-		Activity activity = new Activity("io.appium.android.apis", "io.appium.android.apis.preference.PreferenceDependencies");
+	public void Miscelenium() throws InterruptedException {
+		//adb shell dumpsys window | grep -E 'mCurrentFocus'
+		Activity activity = new Activity("com.androidsample.generalstore", "com.androidsample.generalstore.AllProductsActivity");
 		driver.startActivity(activity);
 		
-		driver.findElement(By.id("android:id/checkbox")).click();
+		//driver.findElement(By.id("android:id/checkbox")).click();
 		//To rotate the device
 		DeviceRotation landscape = new DeviceRotation(0, 0, 90);
-		driver.rotate(landscape);
+		driver.rotate(ScreenOrientation.LANDSCAPE);		
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//android.widget.RelativeLayout)[2]")).click();
 		String alertTitle = driver.findElement(By.id("android:id/alertTitle")).getText();
 		Assert.assertEquals(alertTitle, "WiFi settings");

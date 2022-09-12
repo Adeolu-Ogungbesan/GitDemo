@@ -17,23 +17,27 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	 public static AndroidDriver driver = null;
 	static AppiumDriverLocalService servic = null;
 	@BeforeClass
 	public void CofigureDriver() throws MalformedURLException {
-		//Start appium programatically
+		//Start appium programatically I still neet to download latest android version in the emulator
 				//AndroiDriver
 				//Appium code -> Appium server-> mobile
-		
-				 servic = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\hp\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+		/*
+		 * WebDriverManager wdm = WebDriverManager.chromedriver().browserVersion(39);
+		 * wdm.setup(); String chromedriverPath = wdm.getDownloadedDriverPath();
+		 */			 servic = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\hp\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
 				.withIPAddress("127.0.0.1").usingPort(4723).build();
 				servic.start();
 				UiAutomator2Options options = new UiAutomator2Options();
+				//options.setChromedriverExecutable(chromedriverPath);
 				options.setDeviceName("Pixel 5 API 22");
 				//options.setApp("C:\\Users\\hp\\eclipse-workspace\\Appium\\uTILS\\resources\\ApiDemos-debug.apk");
-				options.setApp("C:\\Users\\hp\\eclipse-workspace\\Appium\\uTILS\\resources\\General-Store.apk");
+				options.setApp("C:\\Users\\hp\\git\\repository\\Appium\\uTILS\\resources\\General-Store.apk");
 				
 				 driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
 				 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
@@ -66,6 +70,13 @@ public class BaseTest {
 				    "direction", "left",
 				    "percent", 0.75
 				));
+			
+			}
+		public double getFormatedSum(String amount) {
+			double price =Double.parseDouble(amount.substring(1));
+			return price;
+				
+			
 		}
 	@AfterClass
 				public void TearDown() throws InterruptedException {

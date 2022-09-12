@@ -1,6 +1,7 @@
 package adeoluogungbesan;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
@@ -15,8 +16,10 @@ public class eCommerce_tc_01 extends BaseTest {
 		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Nigeria\"));"));
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Nigeria']")).click();
 		driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
-		Thread.sleep(2000);
-		
+		String toastMessage = driver.findElement(By.xpath("(//android.widget.Toast)[1]")).getAttribute("name");
+		Assert.assertEquals(toastMessage, "Please enter your name");
+		//Thread.sleep(2000);
+
 	}
 
 }
